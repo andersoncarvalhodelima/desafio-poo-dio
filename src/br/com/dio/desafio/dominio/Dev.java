@@ -37,6 +37,10 @@ public class Dev {
                 .sum();*/
     }
 
+    public void exibirCertificado(Bootcamp bootcamp) {
+        System.out.println(bootcamp.emitirCertificado(this));
+    }
+
 
     public String getNome() {
         return nome;

@@ -67,4 +67,12 @@ public class Bootcamp {
     public int hashCode() {
         return Objects.hash(nome, descricao, dataInicial, dataFinal, devsInscritos, conteudos);
     }
+
+    public String emitirCertificado(Dev dev){
+        if (dev.getConteudosConcluidos().containsAll(this.conteudos)){
+            return "Certificado de Conclusão para " + dev.getNome() + " no Bootcamp " + this.nome;
+        } else {
+            return "Certificado não disponível - Conclua todos os conteúdos do Bootcamp " + this.nome;
+        }
+    }
 }
